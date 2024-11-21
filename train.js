@@ -95,3 +95,15 @@ console.log("passed here 1");
     // console.log(javob);
  // }
  // run();
+
+ // A-TASK
+
+ function countLetter(letter, word) {
+ let count = 0;
+ for (let char of word) {
+    if (char === letter) {
+        count++;
+    }
+ }
+ return count;
+}
