@@ -3,7 +3,7 @@ const mongodb = require("mongodb");
 
 let db;
 const connectionString = 
-  "mongodb+srv://khursandbekakhmadjonov:QqQzR9OoLTGUtBpY@cluster0.dvl6e.mongodb.net/";
+  "mongodb+srv://khursandbekakhmadjonov:QqQzR9OoLTGUtBpY@cluster0.dvl6e.mongodb.net/Reja";
 
 mongodb.connect(
     connectionString, 
@@ -14,8 +14,9 @@ mongodb.connect(
     (err, client) => {
       if (err) console.log("ERROR on connection MongoDB");
       else {
-        console.log(client);
         console.log("MongoDB connection succeed");
+        module.exports = client;
+
         const app = require("./app");
         const server = http.createServer(app);
         let PORT = 3000;
