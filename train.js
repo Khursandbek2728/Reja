@@ -112,10 +112,11 @@
 
 // 26.11.2024
 // B-TASK
+
 function countDigits(inputString) {
    const digits = inputString.match(/\d/g);
    return digits ? digits.length : 0;
 }
 
-const result = digits("ad2a54y79wet0sfgb9");
-console.log(result);
+console.log(countDigits(("ad2a54y79wet0sfgb9")));
+//7
