@@ -120,3 +120,14 @@
 
 // console.log(countDigits(("ad2a54y79wet0sfgb9")));
 //7
+
+
+// C-TASK
+
+function checkContent(string1, string2) {
+   let sortedString1 = string1.split('').sort().join('');
+   let sortedString2 = string2.split('').sort().join('');
+   return sortedString1 === sortedString2;
+}
+console.log(checkContent("mitgroup", "gmtiprou"));
+console.log(checkContent("mitgroup", "hello"));
