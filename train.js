@@ -137,52 +137,64 @@
 
 
 
-class Shop {
-   constructor(non, lagmon, cola) {
-     this.products = {
-       non: non,
-       lagmon: lagmon,
-       cola: cola,
-     };
-   }
+// class Shop {
+   // constructor(non, lagmon, cola) {
+     // this.products = {
+       // non: non,
+       // lagmon: lagmon,
+       // cola: cola,
+     // };
+   // }
  
    // Qoldiqni ko'rsatish
-   qoldiq() {
-     const time = new Date().toLocaleTimeString();
-     return `Hozir ${time}da ${this.products.non}ta non, ${this.products.lagmon}ta lagmon va ${this.products.cola}ta cola mavjud!`;
-   }
+   // qoldiq() {
+     // const time = new Date().toLocaleTimeString();
+     // return `Hozir ${time}da ${this.products.non}ta non, ${this.products.lagmon}ta lagmon va ${this.products.cola}ta cola mavjud!`;
+   // }
  
    // Mahsulot sotish
-   sotish(product, amount) {
-     const time = new Date().toLocaleTimeString();
-     if (this.products[product] === undefined) {
-       return `Hozir ${time}da xato: bunday mahsulot mavjud emas!`;
-     }
+   // sotish(product, amount) {
+     // const time = new Date().toLocaleTimeString();
+     // if (this.products[product] === undefined) {
+       // return `Hozir ${time}da xato: bunday mahsulot mavjud emas!`;
+     // }
  
-     if (this.products[product] < amount) {
-       return `Hozir ${time}da xato: ${product}dan yetarli miqdor yo'q!`;
-     } else {
-       this.products[product] -= amount;
-       return `Hozir ${time}da ${amount}ta ${product} sotildi.`;
-     }
-   }
+     // if (this.products[product] < amount) {
+       // return `Hozir ${time}da xato: ${product}dan yetarli miqdor yo'q!`;
+     // } else {
+       // this.products[product] -= amount;
+       // return `Hozir ${time}da ${amount}ta ${product} sotildi.`;
+     // }
+   // }
  
    // Mahsulot qabul qilish
-   qabul(product, amount) {
-     const time = new Date().toLocaleTimeString();
-     if (this.products[product] === undefined) {
-       return `Hozir ${time}da xato: bunday mahsulot mavjud emas, avval ro'yxatga oling!`;
-     }
+   // qabul(product, amount) {
+     // const time = new Date().toLocaleTimeString();
+     // if (this.products[product] === undefined) {
+       // return `Hozir ${time}da xato: bunday mahsulot mavjud emas, avval ro'yxatga oling!`;
+     // }
  
-     this.products[product] += amount;
-     return `Hozir ${time}da ${amount}ta ${product} qabul qilindi.`;
-   }
- }
+    // this.products[product] += amount;
+     // return `Hozir ${time}da ${amount}ta ${product} qabul qilindi.`;
+   // }
+ // }
  
  // Sinov uchun
- const shop = new Shop(4, 5, 2);
+ // const shop = new Shop(4, 5, 2);
  
- console.log(shop.qoldiq()); // Qoldiqni ko'rsatadi
- console.log(shop.sotish('non', 3)); // Non sotiladi
- console.log(shop.qabul('cola', 4)); // Cola qabul qilinadi
- console.log(shop.qoldiq()); // Qoldiqni qaytadan ko'rsatadi
+ // console.log(shop.qoldiq()); // Qoldiqni ko'rsatadi
+ // console.log(shop.sotish('non', 3)); // Non sotiladi
+ // console.log(shop.qabul('cola', 4)); // Cola qabul qilinadi
+ // console.log(shop.qoldiq()); // Qoldiqni qaytadan ko'rsatadi
+
+
+
+ //    E-TASK
+
+ function getReverse(str) {
+  return str.split('').reverse().join('');
+ }
+
+ console.log(getReverse("hello"));
+
+ ///"olleh"
