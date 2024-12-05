@@ -191,10 +191,36 @@
 
  //    E-TASK
 
- function getReverse(str) {
-  return str.split('').reverse().join('');
- }
+//  function getReverse(str) {
+//  return str.split('').reverse().join('');
+ // }
 
- console.log(getReverse("hello"));
+ // console.log(getReverse("hello"));
 
  ///"olleh"
+
+
+
+ //  F-TASK
+
+ function findDoublers(str) {
+  // Harflarni saqlash uchun bo'sh ob'ekt yaratamiz
+  const charSet = new Set();
+
+  // String ichidagi har bir harfni tekshiramiz
+  for (let char of str) {
+      // Agar harf oldin uchragan bo'lsa, true qaytaramiz
+      if (charSet.has(char)) {
+          return true;
+      }
+      // Harfni ob'ektga qo'shamiz
+      charSet.add(char);
+  }
+
+  // Takrorlangan harf yo'q bo'lsa, false qaytariladi
+  return false;
+}
+
+// Misollar
+console.log(findDoublers("hello")); // true
+console.log(findDoublers("world")); // false
